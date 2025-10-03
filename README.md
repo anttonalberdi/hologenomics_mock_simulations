@@ -1,15 +1,14 @@
 # Hologenomics mock simulations
 Mock simulated hologenomic datasets
 
-### Simulation of two populations of lizards
+## Simulation of two populations of lizards
 
 Prepare the working directory
 ```sh
 mkdir holosimulator_lizards
 cd holosimulator_lizards
 ```
-
-#### Fetch and subset host genome
+### Fetch and subset host genome
 
 Download the genome and check contig headers.
 ```sh
@@ -24,7 +23,7 @@ awk '/^>NC_041312.1/{flag=1;print;next} /^>/{flag=0} flag' GCF_004329235.1_PodMu
 awk '/^>NC_041313.1/{flag=1;print;next} /^>/{flag=0} flag' GCF_004329235.1_PodMur_1.0_genomic.fna >> host.fna
 ```
 
-#### Simulate genomic divergence
+### Simulate genomic divergence
 
 Using 'holosimulate mutations' simulate two population-reference genomes that are ca. 1% (99% ANI) divergent from the original. 
 Each of these genomes will represent the centroid of the populations A and B, respectivelly.
@@ -45,8 +44,12 @@ holosimulator mutations -i host6.fna -o host9.fna -a 0.999
 holosimulator mutations -i host6.fna -o host10.fna -a 0.999
 ```
 
+### Simulate reads
+
 ```sh
-wget
+wget 
+mkdir reads
+holosimulator genomics -i XXXXX -o reads
 ```
 
 #### Validate genomic divergence
