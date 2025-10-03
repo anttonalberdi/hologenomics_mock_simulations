@@ -32,7 +32,7 @@ holosimulator mutations -i host.fna -o host1.fna -a 0.99
 holosimulator mutations -i host.fna -o host6.fna -a 0.99
 ```
 
-Using 'holosimulate mutations' simulate four more reference genomes that are ca. 0.1% (99.9% ANI) divergent from the reference population genomes. 
+Using **holosimulator mutations** simulate four more reference genomes that are ca. 0.1% (99.9% ANI) divergent from the reference population genomes. 
 ```sh
 holosimulator mutations -i host1.fna -o host2.fna -a 0.999
 holosimulator mutations -i host1.fna -o host3.fna -a 0.999
@@ -45,6 +45,8 @@ holosimulator mutations -i host6.fna -o host10.fna -a 0.999
 ```
 
 ### Simulate reads
+
+Simulate the number of reads defined in the csv file from the corresponding genomes.
 
 ```sh
 wget https://raw.githubusercontent.com/anttonalberdi/hologenomics_mock_simulations/refs/heads/main/lizards_genomics.csv
