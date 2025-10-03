@@ -29,6 +29,7 @@ awk '/^>NC_041313.1/{flag=1;print;next} /^>/{flag=0} flag' GCF_004329235.1_PodMu
 Using **holosimulator mutations** simulate two population-reference genomes that are ca. 1% (99% ANI) divergent from the original. 
 Each of these genomes will represent the centroid of the populations A and B, respectivelly.
 ```sh
+conda activate holosimulator
 holosimulator mutations -i genomes/host.fna -o genomes/host1.fna -a 0.99
 holosimulator mutations -i genomes/host.fna -o genomes/host6.fna -a 0.99
 ```
@@ -56,6 +57,15 @@ wget https://raw.githubusercontent.com/anttonalberdi/hologenomics_mock_simulatio
 wget https://raw.githubusercontent.com/anttonalberdi/hologenomics_mock_simulations/refs/heads/main/lizards_genomics.sh
 mkdir reads
 sbatch lizards_genomics.sh
+```
+
+### 5. Conduct genome-resolved metagenomic analysis
+
+```sh
+conda deactivate
+conda activate drakkar
+screen -S holosimulator_lizards
+drakkar complete -i reads -r genomes/host.fna
 ```
 
 #### Validate genomic divergence
