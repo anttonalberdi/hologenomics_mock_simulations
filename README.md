@@ -9,7 +9,7 @@ mkdir holosimulator_lizards
 cd holosimulator_lizard
 mkdir genomes
 ```
-### Fetch and subset host genome
+### 1. Fetch and subset reference host genome
 
 Download the genome and check contig headers.
 ```sh
@@ -24,14 +24,16 @@ awk '/^>NC_041312.1/{flag=1;print;next} /^>/{flag=0} flag' GCF_004329235.1_PodMu
 awk '/^>NC_041313.1/{flag=1;print;next} /^>/{flag=0} flag' GCF_004329235.1_PodMur_1.0_genomic.fna >> genomes/host.fna
 ```
 
-### Simulate genomic divergence
+### 2. Simulate genomic divergence between populations
 
-Using 'holosimulate mutations' simulate two population-reference genomes that are ca. 1% (99% ANI) divergent from the original. 
+Using **holosimulator mutations** simulate two population-reference genomes that are ca. 1% (99% ANI) divergent from the original. 
 Each of these genomes will represent the centroid of the populations A and B, respectivelly.
 ```sh
 holosimulator mutations -i genomes/host.fna -o genomes/host1.fna -a 0.99
 holosimulator mutations -i genomes/host.fna -o genomes/host6.fna -a 0.99
 ```
+
+### 3. Simulate genomic divergence within populations
 
 Using **holosimulator mutations** simulate four more reference genomes that are ca. 0.1% (99.9% ANI) divergent from the reference population genomes. 
 ```sh
@@ -45,7 +47,7 @@ holosimulator mutations -i genomes/host6.fna -o genomes/host9.fna -a 0.999
 holosimulator mutations -i genomes/host6.fna -o genomes/host10.fna -a 0.999
 ```
 
-### Simulate reads
+### 4. Simulate host genomic and microbial metagenomic reads
 
 Simulate the number of reads defined in the csv file from the corresponding genomes.
 
