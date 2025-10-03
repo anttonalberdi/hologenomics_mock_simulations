@@ -51,8 +51,9 @@ Simulate the number of reads defined in the csv file from the corresponding geno
 
 ```sh
 wget https://raw.githubusercontent.com/anttonalberdi/hologenomics_mock_simulations/refs/heads/main/lizards_genomics.csv
+wget https://raw.githubusercontent.com/anttonalberdi/hologenomics_mock_simulations/refs/heads/main/lizards_genomics.sh
 mkdir reads
-holosimulator genomics -i lizards_genomics.csv -o reads
+sbatch lizards_genomics.sh
 ```
 
 #### Validate genomic divergence
