@@ -47,9 +47,9 @@ holosimulator mutations -i host6.fna -o host10.fna -a 0.999
 ### Simulate reads
 
 ```sh
-wget 
+wget https://raw.githubusercontent.com/anttonalberdi/hologenomics_mock_simulations/refs/heads/main/lizards_genomics.csv
 mkdir reads
-holosimulator genomics -i XXXXX -o reads
+holosimulator genomics -i lizards_genomics.csv -o reads
 ```
 
 #### Validate genomic divergence
