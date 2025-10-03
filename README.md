@@ -6,7 +6,8 @@ Mock simulated hologenomic datasets
 Prepare the working directory
 ```sh
 mkdir holosimulator_lizards
-cd holosimulator_lizards
+cd holosimulator_lizard
+mkdir genomes
 ```
 ### Fetch and subset host genome
 
@@ -19,8 +20,8 @@ grep ">" GCF_004329235.1_PodMur_1.0_genomic.fna | head
 
 Subset the genome to the first two chromosomes to avoid unnecessary data volumes. 
 ```sh
-awk '/^>NC_041312.1/{flag=1;print;next} /^>/{flag=0} flag' GCF_004329235.1_PodMur_1.0_genomic.fna > host.fna
-awk '/^>NC_041313.1/{flag=1;print;next} /^>/{flag=0} flag' GCF_004329235.1_PodMur_1.0_genomic.fna >> host.fna
+awk '/^>NC_041312.1/{flag=1;print;next} /^>/{flag=0} flag' GCF_004329235.1_PodMur_1.0_genomic.fna > genomes/host.fna
+awk '/^>NC_041313.1/{flag=1;print;next} /^>/{flag=0} flag' GCF_004329235.1_PodMur_1.0_genomic.fna >> genomes/host.fna
 ```
 
 ### Simulate genomic divergence
@@ -28,20 +29,20 @@ awk '/^>NC_041313.1/{flag=1;print;next} /^>/{flag=0} flag' GCF_004329235.1_PodMu
 Using 'holosimulate mutations' simulate two population-reference genomes that are ca. 1% (99% ANI) divergent from the original. 
 Each of these genomes will represent the centroid of the populations A and B, respectivelly.
 ```sh
-holosimulator mutations -i host.fna -o host1.fna -a 0.99
-holosimulator mutations -i host.fna -o host6.fna -a 0.99
+holosimulator mutations -i genomes/host.fna -o genomes/host1.fna -a 0.99
+holosimulator mutations -i genomes/host.fna -o genomes/host6.fna -a 0.99
 ```
 
 Using **holosimulator mutations** simulate four more reference genomes that are ca. 0.1% (99.9% ANI) divergent from the reference population genomes. 
 ```sh
-holosimulator mutations -i host1.fna -o host2.fna -a 0.999
-holosimulator mutations -i host1.fna -o host3.fna -a 0.999
-holosimulator mutations -i host1.fna -o host4.fna -a 0.999
-holosimulator mutations -i host1.fna -o host5.fna -a 0.999
-holosimulator mutations -i host6.fna -o host7.fna -a 0.999
-holosimulator mutations -i host6.fna -o host8.fna -a 0.999
-holosimulator mutations -i host6.fna -o host9.fna -a 0.999
-holosimulator mutations -i host6.fna -o host10.fna -a 0.999
+holosimulator mutations -i genomes/host1.fna -o genomes/host2.fna -a 0.999
+holosimulator mutations -i genomes/host1.fna -o genomes/host3.fna -a 0.999
+holosimulator mutations -i genomes/host1.fna -o genomes/host4.fna -a 0.999
+holosimulator mutations -i genomes/host1.fna -o genomes/host5.fna -a 0.999
+holosimulator mutations -i genomes/host6.fna -o genomes/host7.fna -a 0.999
+holosimulator mutations -i genomes/host6.fna -o genomes/host8.fna -a 0.999
+holosimulator mutations -i genomes/host6.fna -o genomes/host9.fna -a 0.999
+holosimulator mutations -i genomes/host6.fna -o genomes/host10.fna -a 0.999
 ```
 
 ### Simulate reads
