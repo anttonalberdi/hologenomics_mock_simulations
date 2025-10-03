@@ -1,14 +1,14 @@
 ﻿Organism,Category,Path,Sample1,Sample2,Sample3,Sample4,Sample5,Sample6,Sample7,Sample8,Sample9,Sample10
-Host1,Host,host1.fna,3450036,0,0,0,0,0,0,0,0,0
-Host2,Host,host2.fna,0,1288779,0,0,0,0,0,0,0,0
-Host3,Host,host3.fna,0,0,7895678,0,0,0,0,0,0,0
-Host4,Host,host4.fna,0,0,0,867868,0,0,0,0,0,0
-Host5,Host,host5.fna,0,0,0,0,18897058,0,0,0,0,0
-Host6,Host,host6.fna,0,0,0,0,0,345346,0,0,0,0
-Host7,Host,host7.fna,0,0,0,0,0,0,3453465,0,0,0
-Host8,Host,host8.fna,0,0,0,0,0,0,0,4353455,0,0
-Host9,Host,host9.fna,0,0,0,0,0,0,0,0,435546,0
-Host10,Host,host10.fna,0,0,0,0,0,0,0,0,0,2132
+Host1,Host,genomes/host1.fna,3450036,0,0,0,0,0,0,0,0,0
+Host2,Host,genomes/host2.fna,0,1288779,0,0,0,0,0,0,0,0
+Host3,Host,genomes/host3.fna,0,0,7895678,0,0,0,0,0,0,0
+Host4,Host,genomes/host4.fna,0,0,0,867868,0,0,0,0,0,0
+Host5,Host,genomes/host5.fna,0,0,0,0,18897058,0,0,0,0,0
+Host6,Host,genomes/host6.fna,0,0,0,0,0,345346,0,0,0,0
+Host7,Host,genomes/host7.fna,0,0,0,0,0,0,3453465,0,0,0
+Host8,Host,genomes/host8.fna,0,0,0,0,0,0,0,4353455,0,0
+Host9,Host,genomes/host9.fna,0,0,0,0,0,0,0,0,435546,0
+Host10,Host,genomes/host10.fna,0,0,0,0,0,0,0,0,0,2132
 Fusobacterium_A ulcerans_A,Microbiome,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/158/275/GCF_000158275.2_ASM15827v2/GCF_000158275.2_ASM15827v2_genomic.fna.gz,1869712,2251774,2450192,2248146,18113,805290,707807,684394,978297,813793
 Buttiauxella ferragutiae,Microbiome,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/002/321/695/GCA_002321695.1_ASM232169v1/GCA_002321695.1_ASM232169v1_genomic.fna.gz,185469,215739,179342,169201,0,743283,537308,704593,624434,564782
 Hafnia alvei,Microbiome,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/146/305/GCF_000146305.1_ASM14630v1/GCF_000146305.1_ASM14630v1_genomic.fna.gz,1083876,1173014,1056470,1089868,9241,997340,1151812,1296534,1009807,1066276
@@ -28,4 +28,5 @@ Lactococcus lactis,Microbiome,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/3
 Rahnella variigena,Microbiome,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/003/602/185/GCF_003602185.1_ASM360218v1/GCF_003602185.1_ASM360218v1_genomic.fna.gz,759951,736463,699981,902456,6819,701537,720342,863431,1023114,906348
 Klebsiella variicola,Microbiome,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/433/655/GCF_000433655.1_MGS634/GCF_000433655.1_MGS634_genomic.fna.gz,168059,210370,194075,186636,0,156689,292992,208248,222613,237912
 Phascolarctobacterium faecium,Microbiome,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/008/672/025/GCA_008672025.1_ASM867202v1/GCA_008672025.1_ASM867202v1_genomic.fna.gz,1207497,1407717,1215341,1381001,13551,1410306,1182045,1641966,1518950,1236562
+
 UMGS946 sp900544965,Microbiome,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/900/544/965/GCA_900544965.1_UMGS726/GCA_900544965.1_UMGS726_genomic.fna.gz,469002,566852,425084,424756,4950,0,0,586,0,58
