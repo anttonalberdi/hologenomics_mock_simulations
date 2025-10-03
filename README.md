@@ -65,7 +65,7 @@ sbatch lizards_genomics.sh
 conda deactivate
 conda activate drakkar
 screen -S holosimulator_lizards
-drakkar complete -i reads -r genomes/host.fna
+drakkar complete -i reads -r genomes/host.fna -m individual,all
 ```
 
 #### Validate genomic divergence
